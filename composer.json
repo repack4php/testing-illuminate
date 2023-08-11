@@ -1,0 +1,136 @@
+{
+    "name": "repack4php/testing-illuminate",
+    "description": "Unit Testing Standalone Illuminate Components.",
+    "license": "MIT",
+    "homepage": "https://github.com/repack4php",
+    "support": {
+        "issues": "https://github.com/repack4php/testing-illuminate/issues",
+        "source": "https://github.com/repack4php/testing-illuminate"
+    },
+    "authors": [
+        {
+            "name": "Divine Nkwati",
+            "email": "drnkwati@gmail.com"
+        }
+    ],
+    "repositories": [
+        {
+            "url": "../illuminate-translation",
+            "type": "path",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "url": "../illuminate-pagination",
+            "type": "path",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "url": "../illuminate-log",
+            "type": "path",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "url": "../illuminate-hashing",
+            "type": "path",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "url": "../illuminate-events",
+            "type": "path",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "url": "../illuminate-encryption",
+            "type": "path",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "url": "../illuminate-container",
+            "type": "path",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "url": "../illuminate-config",
+            "type": "path",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/repack4php/illuminate-translation.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/repack4php/illuminate-pagination.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/repack4php/illuminate-log.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/repack4php/illuminate-hashing.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/repack4php/illuminate-events.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/repack4php/illuminate-encryption.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/repack4php/illuminate-container.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/repack4php/illuminate-config.git"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "repack4php/illuminate-config": "dev-main",
+        "repack4php/illuminate-container": "dev-main",
+        "repack4php/illuminate-encryption": "dev-main",
+        "repack4php/illuminate-events": "dev-main",
+        "repack4php/illuminate-hashing": "dev-main",
+        "repack4php/illuminate-log": "dev-main",
+        "repack4php/illuminate-pagination": "dev-main",
+        "repack4php/illuminate-translation": "dev-main",
+        "phpunit/php-code-coverage": ">=5.3",
+        "phpunit/phpunit": ">=6.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Repack4php\\Testing\\Illuminate\\": "src/"
+        }
+    },
+    "suggest": {
+        "phpunit/phpunit": "Documentation: https://phpunit.de/announcements/phpunit-6.html"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "6.x-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}

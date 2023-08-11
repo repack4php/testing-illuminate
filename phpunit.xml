@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/6.5/phpunit.xsd"
+         backupGlobals="false"
+         colors="true"
+         bootstrap="vendor/autoload.php"
+         failOnRisky="true"
+         failOnWarning="true"
+>
+    <php>
+        <ini name="error_reporting" value="-1" />
+    </php>
+
+    <testsuites>
+        <testsuite name="All">
+            <directory>./src/</directory>
+        </testsuite>
+    </testsuites>
+    
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./vendor/repack4php</directory>
+        </whitelist>
+    </filter>
+
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">./vendor/repack4php</directory>
+        </include>
+        <report>
+            <clover outputFile="clover.xml" />
+            <cobertura outputFile="cobertura.xml" />
+            <crap4j outputFile="crap4j.xml" threshold="50" />
+            <html outputDirectory="html-coverage" lowUpperBound="50" highLowerBound="90" />
+            <php outputFile="coverage.php" />
+            <text outputFile="coverage.txt" showUncoveredFiles="false" showOnlySummary="true" />
+            <xml outputDirectory="xml-coverage" />
+        </report>
+    </coverage>
+
+    <php>
+        <env name="APP_ENV" value="testing"/>
+        <env name="SESSION_DRIVER" value="array"/>
+    </php>
+</phpunit>
