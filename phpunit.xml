@@ -21,6 +21,9 @@
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./vendor/repack4php</directory>
+            <exclude>
+                <directory>./vendor/repack4php/illuminate-pagination/src/resources</directory>
+            </exclude>
         </whitelist>
     </filter>
 
